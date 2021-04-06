@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Quản lý nhân viên"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:text="Họ và tên:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="105dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/txtName"
+        android:hint="Nguyen Van A"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtName"
+        android:text="Ngày tháng năm sinh:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/edtBirth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edtName"
+        android:layout_marginLeft="57dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/txtPhongBan"
+        android:hint="19/05/2000"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtPhongBan"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtBirth"
+        android:text="Tên phòng ban:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"/>
+
+    <EditText
+        android:id="@+id/edtPhongBan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtBirth"
+        android:layout_marginLeft="57dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/txtPhongBan"
+        android:hint="Kinh doanh"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtPhongBan"
+        android:text="Giới tính:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"/>
+
+    <RadioGroup
+        android:id="@+id/rdGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPhongBan"
+        android:layout_toRightOf="@+id/txtGender">
+
+        <RadioButton
+            android:id="@+id/rdBtnMale"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="Nam"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rdBtnFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="Nữ"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtWorkedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rdGroupGender"
+        android:text="Thời gian công tác:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center_vertical"/>
+
+    <CheckBox
+        android:id="@+id/cb1To5Year"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtWorkedTime"
+        android:text="1 - 5 năm"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center_vertical"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/cb5To10Year"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/cb1To5Year"
+        android:text="5 - 10 năm"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center_vertical"/>
+
+    <CheckBox
+        android:id="@+id/cbGreater10Year"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/cb5To10Year"
+        android:text="Lớn hơn 10 năm"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center_vertical"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="NHẬP LIỆU"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:backgroundTint="#BCBCBC"
+        android:layout_below="@id/cbGreater10Year"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="HIỂN THỊ"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:backgroundTint="#BCBCBC"
+        android:layout_below="@id/cbGreater10Year"
+        android:layout_toRightOf="@id/btnAdd"
+        />
+
+    <ListView
+        android:id="@+id/lvNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAdd"/>
+
+</RelativeLayout>
